@@ -8,7 +8,7 @@
             "type": "chrome",
             "request": "launch",
             "name": "Open PostSaleTools.html",
-            "file": "d:\\12_Tools\\PostSalesWebTools\\PostSaleTools.html"
+            "file": "d:\\12_Tools\\PostSalesWebTools\\index.html"
         }
     ]
 }
