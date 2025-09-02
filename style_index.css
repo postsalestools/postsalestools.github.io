@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+:root{
+    --accent-color: #8672FF;
+    --base-color: white;
+    --text-color: #2E2B41;
+    --input-color: #c6bef1;
+    --extra-color: #30cc09fa;
+    --incorrect-color: #cf5252;
+
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-family: Lexend, Segoe Ui, sans-serif;
+    font-size: 12pt;
+    color: var(--text-color);
+    text-align: center;
+}
+body{
+    height: 100vh;
+    background-image: url(gotaroxa.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.wrapper{
+    box-sizing: border-box;
+    background-color: var(--base-color);
+    height: 100vh;
+    width: max(40%, 600px);
+    padding: 10px;
+    border-radius: 0 20px 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+h1{
+    font-size: 3rem;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+div{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+a{
+    text-decoration: none;
+    color: var(--accent-color);
+}
+a:hover{
+    text-decoration: underline;
+}
+@media(max-width: 1100px){
+    .wrapper{
+        width: min(600px, 100%);
+        border-radius: 0;
+    }
+}
+#error-message{
+    color: var(--incorrect-color);
+}
