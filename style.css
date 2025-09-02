@@ -5,7 +5,7 @@
     --text-color: #2E2B41;
     --input-color: #c6bef1;
     --extra-color: #30cc09fa;
-    --incorrect-color: #C40404;
+    --incorrect-color: #cf5252;
 
 }
 *{
@@ -129,9 +129,12 @@ a:hover{
         border-radius: 0;
     }
 }
-form.div.incorrect label{
+form div.incorrect label{
     background-color: var(--incorrect-color);
 }
-form.div.incorrect input{
+form div.incorrect input{
     border-color: var(--incorrect-color);
+}
+#error-message{
+    color: var(--incorrect-color);
 }
