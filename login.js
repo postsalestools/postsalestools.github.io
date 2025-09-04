@@ -11,8 +11,8 @@ messagingSenderId: '850588513620',
 appId: '1:850588513620:web:6f1dcd66bfbcbe40d244c1'
 }
 
-const app = initializeApp(firebaseConfig)
-const auth = getAuth(app)
+//const app = initializeApp(firebaseConfig)
+//const auth = getAuth(app)
 const form = document.getElementById('form')
 const firstnameInput = document.getElementById('firstname-input')
 const fullnameInput = document.getElementById('fullname-input')
