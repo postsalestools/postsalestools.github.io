@@ -1,6 +1,6 @@
-//import { initializeApp } from 'https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js';
-//import { getAuth, signInWithEmailAndPassword } from 'https://www.gstatic.com/firebasejs/11.0.2/firebase-auth.js';
-//import { ref, set, child, getDatabase, onValue, get, push, update } from 'https://www.gstatic.com/firebasejs/11.0.2/firebase-database.js';
+import { initializeApp } from 'https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js';
+import { getAuth, signInWithEmailAndPassword } from 'https://www.gstatic.com/firebasejs/11.0.2/firebase-auth.js';
+import { ref, set, child, getDatabase, onValue, get, push, update } from 'https://www.gstatic.com/firebasejs/11.0.2/firebase-database.js';
 
 const firebaseConfig = {
 apiKey: 'AIzaSyBpoFg-BzRCy6ZQdhPmd3zJ_6tR8Blt6sU',
@@ -11,8 +11,8 @@ messagingSenderId: '850588513620',
 appId: '1:850588513620:web:6f1dcd66bfbcbe40d244c1'
 }
 
-//const app = initializeApp(firebaseConfig)
-//const auth = getAuth(app)
+const app = initializeApp(firebaseConfig)
+const auth = getAuth(app)
 const form = document.getElementById('form')
 const firstnameInput = document.getElementById('firstname-input')
 const fullnameInput = document.getElementById('fullname-input')
@@ -35,6 +35,18 @@ form.addEventListener('submit', (e) => {
     if(errors.length > 0){
         e.preventDefault()
         errormessage.innerText = errors.join(". ")
+    }
+    else{
+        // Faz login no Firebase
+        signInWithEmailAndPassword(auth, loginemailInput.value, passwordInput.value)
+        .then((userCredential) => {
+          mensagem.textContent = "Login realizado com sucesso!";
+          // Redireciona após login
+          window.location.href = "VPNRquest.html"; 
+        })
+        .catch((error) => {
+          mensagem.textContent = "Erro: " + error.message;
+        });
     }
 })
 
