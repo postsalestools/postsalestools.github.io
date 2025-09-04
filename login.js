@@ -36,7 +36,6 @@ form.addEventListener('submit', (e) => {
         e.preventDefault()
         errormessage.innerText = errors.join(". ")
     }
-    else{
         // Faz login no Firebase
         signInWithEmailAndPassword(auth, loginemailInput.value, passwordInput.value)
         .then((userCredential) => {
@@ -47,7 +46,6 @@ form.addEventListener('submit', (e) => {
         .catch((error) => {
           mensagem.textContent = "Erro: " + error.message;
         });
-    }
 })
 
 
