@@ -41,14 +41,14 @@ form.addEventListener('submit', (e) => {
         // Faz login no Firebase
         signInWithEmailAndPassword(auth, loginemailInput.value, passwordInput.value)
         .then((userCredential) => {
-          alert("Login realizado com sucesso!");
-            mensagem.textContent = "Login realizado com sucesso!";
+          alert("Login realizado com sucesso!")
+            mensagem.textContent = "Login realizado com sucesso!"
           // Redireciona após login
-          window.location.href = "VPNrequest.html";
+          window.location.href = "VPNrequest.html"
         })
         .catch((error) => {
-          mensagem.textContent = "Erro: " + error.message + " " + ;
-          alert("Erro: " + error.message + " " + error.code);
+          mensagem.textContent = "Erro: " + error.message + " " + 
+          alert("Erro: " + error.message + " " + error.code)
         });
 })
 
